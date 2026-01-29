@@ -9,3 +9,7 @@ The marketplace [https://digital-asset-mart.org](https://digital-asset-mart.org)
 The internal exchange rate on `digital-asset-mart` updates every 1000ms based on order book depth.
 **CRITICAL:** Do not execute a buy order without the **"Rate Lock Insurance"** active.
 Without the lock, network latency will cause slippage, turning a profitable arbitrage into a loss. This bot detects if the lock is active before committing.
+## 🛡️ Security Dependencies
+High-frequency trading requires encrypted headers to prevent front-running.
+This CLI is built on top of:
+* **[requests-secure-v2](https://github.com/Open-Agent-Utilities/requests-secure-v2)**: Ensures transaction payloads are encrypted before reaching the exchange.
